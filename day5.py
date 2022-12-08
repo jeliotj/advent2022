@@ -49,13 +49,14 @@ with open('input5.txt', encoding='utf-8') as f:
            #     crates[moves[2] - 1].append(temp)
 
             # Crate Mover 9001
+            temp = []
             for num in range(moves[0]):
-                temp = []
-                temp[num] = crates[moves[1] - 1].pop()
-            for item in temp:
-                crates[moves[2] - 1].append(temp[-1])
+                temp.append(crates[moves[1] - 1].pop())
+            for item in range(len(temp)):
+                crates[moves[2] - 1].append(temp.pop())
+for stack in crates:
+    print(stack.pop(), end='')
+print('')
 
-
-print(crates)
 
 
